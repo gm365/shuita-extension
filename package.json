@@ -1,0 +1,10 @@
+{
+  "name": "shuita-extension",
+  "version": "0.2.0",
+  "license": "MIT",
+  "type": "module",
+  "description": "Browser extension for shuita.xyz AI subscription price comparison.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

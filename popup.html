@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水獭 AI 比价</title>
+    <link rel="stylesheet" href="src/popup.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="header">
+        <a class="brand" href="https://shuita.xyz/" target="_blank" rel="noopener noreferrer">
+          <span class="brand-logo-wrap">
+            <img src="icons/icon-48.png" width="30" height="30" alt="" class="brand-logo" />
+          </span>
+          <div class="brand-text">
+            <span class="brand-name">水獭 AI 比价</span>
+            <span class="brand-sub">实付到手价 · 有货优先</span>
+          </div>
+        </a>
+        <div class="header-actions">
+          <button
+            id="pillToggle"
+            type="button"
+            class="pill-switch"
+            role="switch"
+            aria-checked="true"
+            title="在 AI 官网升级页显示比价浮窗"
+          >
+            <span class="pill-switch-label">浮窗</span>
+            <span class="switch-track" aria-hidden="true">
+              <span class="switch-thumb"></span>
+            </span>
+          </button>
+          <button
+            id="refreshBtn"
+            type="button"
+            class="icon-btn"
+            title="刷新最新价格"
+            aria-label="刷新最新价格"
+          >
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+              <polyline points="21 3 21 9 15 9" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div id="statusBanner" class="banner" hidden></div>
+
+      <main id="cards" class="cards" aria-live="polite">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </main>
+
+      <footer class="footer">
+        <span class="updated-row">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="updatedText">加载中…</span>
+        </span>
+        <a class="footer-cta" href="https://shuita.xyz/" target="_blank" rel="noopener noreferrer">全部比价 ↗</a>
+      </footer>
+    </div>
+
+    <script type="module" src="src/popup.js"></script>
+  </body>
+</html>

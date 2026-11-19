@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "水獭 AI 比价",
+  "version": "0.2.0",
+  "description": "实时查看 ChatGPT、Claude、Gemini、Grok 最低到手价，并在官网升级页提供克制的价格参考。",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "水獭 AI 比价",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://shuita.xyz/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://openai.com/*",
+        "https://claude.ai/*",
+        "https://www.anthropic.com/*",
+        "https://anthropic.com/*",
+        "https://gemini.google.com/*",
+        "https://one.google.com/*",
+        "https://grok.com/*",
+        "https://x.ai/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/icon-48.png"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://openai.com/*",
+        "https://claude.ai/*",
+        "https://www.anthropic.com/*",
+        "https://anthropic.com/*",
+        "https://gemini.google.com/*",
+        "https://one.google.com/*",
+        "https://grok.com/*",
+        "https://x.ai/*"
+      ]
+    }
+  ]
+}
