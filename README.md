@@ -24,16 +24,18 @@
 
 ## 权限与隐私说明
 
-本扩展不收集、不上传任何个人身份信息、浏览历史或对话内容：
+本扩展不收集、不上传、不出售或向第三方共享任何个人身份信息、浏览历史、账号凭据或对话内容：
 
-- **`storage`**：仅在浏览器本地保存价格缓存（10 分钟有效期）、你选择的常用规格、浮窗总开关以及 7 天静默记录。
-- **`https://shuita.xyz/*`**：由后台 Service Worker 读取公开价格行情切片（`/api/mcp/index.json` 与 `/api/mcp/sku/<sku>.json`），并内置 10 分钟缓存与 30 秒手动刷新防抖。
-- **官网 `content_scripts`**：仅在指定的 4 家 AI 官网域名运行，且只在 URL 命中升级/定价/账单路由时渲染隔离的 Shadow DOM 浮窗，不读取页面表单或聊天内容。
+- **`storage`**：仅在浏览器本地保存价格缓存（10 分钟有效期）、你选择的常用规格、浮窗总开关以及 7 天静默记录；卸载扩展或清除浏览器扩展存储即可删除全部本地数据。
+- **`https://shuita.xyz/*`**：由后台 Service Worker 发起只读请求，拉取公开价格行情切片（`/api/mcp/index.json` 与 `/api/mcp/sku/<sku>.json`），请求不包含用户标识或当前访问网址，并内置 10 分钟缓存与 30 秒手动刷新防抖。
+- **官网 `content_scripts`**：仅在 ChatGPT/OpenAI、Claude/Anthropic、Gemini/Google One、Grok/xAI 官网域名运行，且只在 URL 命中升级/定价/账单路由时渲染隔离的 Shadow DOM 浮窗，不读取页面表单或聊天内容。
+- **隐私政策与联系**：完整站内声明见 [水獭隐私说明](https://shuita.xyz/privacy) 与 [扩展页面](https://shuita.xyz/extension#privacy)；如有隐私或合规问题，请联系 `copyright@shuita.xyz`。
 
-## 本地测试
+## 本地测试与打包
 
 ```bash
-npm test
+npm test      # 运行单元测试
+npm run package  # 生成用于上架的精简 ZIP 包（输出至 dist/）
 ```
 
 ## 开源协议
