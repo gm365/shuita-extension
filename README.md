@@ -2,6 +2,10 @@
 
 面向 Chrome / Edge / Arc / Brave（Manifest V3）的轻量 AI 订阅价格查询插件，实时同步 [水獭 AI 比价（shuita.xyz）](https://shuita.xyz/) 的全网到手价。
 
+<p>
+  <img src="./docs/preview.webp" width="328" alt="水獭 AI 比价浏览器扩展预览" />
+</p>
+
 ## 核心功能
 
 - **四大主力模型速览**：默认展示 **GPT / Claude / Gemini / Grok** 当前最便宜的实付到手价与有货商家数。
