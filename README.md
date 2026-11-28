@@ -1,6 +1,6 @@
 # 水獭 AI 比价浏览器扩展（shuita-extension）
 
-面向 Chrome / Edge / Arc / Brave（Manifest V3）的轻量 AI 订阅价格查询插件，实时同步 [水獭 AI 比价（shuita.xyz）](https://shuita.xyz/) 的全网到手价。
+面向 Chrome / Edge / Firefox / Arc / Brave（Manifest V3）的轻量 AI 订阅价格查询插件，实时同步 [水獭 AI 比价（shuita.xyz）](https://shuita.xyz/) 的全网到手价。
 
 <p>
   <img src="./docs/preview.webp" width="328" alt="水獭 AI 比价浏览器扩展预览" />
@@ -34,9 +34,19 @@
 ## 本地测试与打包
 
 ```bash
-npm test      # 运行单元测试
-npm run package  # 生成用于上架的精简 ZIP 包（输出至 dist/）
+npm test              # 运行单元测试
+npm run package       # 生成 Chrome / Edge 上架 ZIP 包（输出至 dist/）
+npm run package:firefox  # 生成 Firefox AMO 兼容 MV3 ZIP 包（输出至 dist/）
+npm run package:all   # 同时打包 Chromium 与 Firefox 版本
 ```
+
+## 相关入口
+
+- [水獭浏览器扩展介绍](https://shuita.xyz/extension)
+- [AI 比价 MCP Server](https://shuita.xyz/mcp)
+- [API 中转站价格榜](https://shuita.xyz/relay)
+- [AI 订阅月度价格报告](https://shuita.xyz/reports)
+- [ChatGPT 比价专区](https://shuita.xyz/c/gpt) · [Claude 比价专区](https://shuita.xyz/c/claude) · [Gemini 比价专区](https://shuita.xyz/c/gemini)
 
 ## 开源协议
 

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "水獭 AI 比价",
-  "version": "0.2.0",
-  "description": "实时查看 ChatGPT、Claude、Gemini、Grok 最低到手价，并在官网升级页提供克制的价格参考。",
+  "name": "水獭 AI 比价 - AI 订阅卡网商城实时比价",
+  "version": "0.2.1",
+  "description": "聚合全网 AI 订阅卡网与商城报价，实时查看 ChatGPT、Claude、Gemini、Grok 含手续费最低到手价与有货低价店铺。",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
